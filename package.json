@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ZennoFact/javadict/issues"
   },
-  "homepage": "https://github.com/ZennoFact/javadict#readme"
+  "homepage": "https://github.com/ZennoFact/javadict#readme",
+  "dependencies": {
+    "glob": "^7.0.3"
+  }
 }
