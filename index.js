@@ -4,13 +4,16 @@ var remote = require('remote');
 var fileUtil = remote.require('./lib/fileUtil');
 var baseDir = process.cwd();
 
-var ngModule = angular.module('javaDict', []);
+var ngModule = angular.module('javaDict', ['ngMaterial'])
 
 ngModule.controller('MainController', function($scope) {
   var main = this;
 
+  // 初期画面の設定
+  main.fileText = fileUtil.getAsText("description.md");
+
   main.getFile = function(file) {
-    console.log(file.filepath);
+    file.isSelected = true;
     main.fileText = fileUtil.getAsText(file.filepath);
   };
 
@@ -33,7 +36,3 @@ ngModule.directive('mdPreview', function() {
     });
   };
 });
-
-// fileUtil.fetchReadmeList(function(err, matches) {
-//   if(!err) document.write(matches.join());
-// });

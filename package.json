@@ -19,5 +19,6 @@
   "homepage": "https://github.com/ZennoFact/javadict#readme",
   "dependencies": {
     "glob": "^7.0.3"
-  }
+  },
+  "devDependencies": {}
 }

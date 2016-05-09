@@ -8,3 +8,6 @@ This app is Java - Japanese dictionary.
 * Electron
 * AngularJS
 * Marked
+
+## Version
+* Version 1.0.0 [2016.5.9]

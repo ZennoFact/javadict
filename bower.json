@@ -17,6 +17,8 @@
   ],
   "dependencies": {
     "angular": "~1.5.5",
-    "marked": "~0.3.5"
+    "marked": "~0.3.5",
+    "angular-material": "~1.0.8",
+    "jquery-2.2.3.min": "https://code.jquery.com/jquery-2.2.3.min.js"
   }
 }
