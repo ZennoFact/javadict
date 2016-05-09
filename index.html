@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="javaDict">
+  <head>
+    <meta charset="utf-8">
+    <title>Java Dict | ZennoFact.</title>
+  </head>
+  <body>
+    <h1>JavaDict</h1>
+    <div ng-controller="MainController as main">
+      <ul>
+        <li ng-repeat="file in main.fileList">
+          <a ng-click="main.getFile(file)">{{file.name}}</a>
+        </li>
+      </ul>
+
+      <div ng-if="main.fileText">
+        <div md-preview="main.fileText"></div>
+      </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/marked/lib/marked.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
