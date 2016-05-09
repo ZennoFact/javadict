@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html ng-app="javaDict">
-  <head>
-    <meta charset="utf-8">
-    <title>Java Dict | ZennoFact.</title>
-  </head>
-  <body>
-    <h1>JavaDict</h1>
-    <div ng-controller="MainController as main">
-      <ul>
+
+<head>
+  <meta charset="utf-8">
+  <title>Java Dict | ZennoFact.</title>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- <h1>JavaDict</h1> -->
+  <md-toolbar layout="col">
+    <h1>JavaDict - for my students.</h1>
+  </md-toolbar>
+  <div ng-controller="MainController as main" layout="row" ng-cloak>
+    <!-- <ul>
         <li ng-repeat="file in main.fileList">
           <a ng-click="main.getFile(file)">{{file.name}}</a>
         </li>
-      </ul>
+      </ul> -->
+    <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2" flex="20">
+      <md-list>
+        <md-subheader class="md-no-sticky">Link[] index;</md-subheader>
+        <md-list-item ng-repeat="file in main.fileList">
+          <md-button ng-click="main.getFile(file)">
+            {{file.name}}
+            <!-- <a ng-click="main.getFile(file)">{{file.name}}</a> -->
+          </md-button>
+        </md-list-item>
+      </md-list>
+    </md-sidenav>
 
-      <div ng-if="main.fileText">
-        <div md-preview="main.fileText"></div>
-      </div>
+    <div ng-if="main.fileText" id="content" flex>
+      <md-content md-preview="main.fileText"></md-content>
     </div>
+  </div>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/marked/lib/marked.js"></script>
-    <script src="index.js"></script>
-  </body>
+  <script src="bower_components/jquery-2.2.3.min/index.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="bower_components/marked/lib/marked.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
