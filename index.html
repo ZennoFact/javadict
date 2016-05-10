@@ -11,7 +11,7 @@
 <body>
   <!-- <h1>JavaDict</h1> -->
   <md-toolbar layout="col">
-    <h1>JavaDict - for my students.</h1>
+    <h3>JavaDict - for my students.</h3>
   </md-toolbar>
   <div ng-controller="MainController as main" layout="row" ng-cloak>
     <!-- <ul>
@@ -21,7 +21,10 @@
       </ul> -->
     <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2" flex="20">
       <md-list>
-        <md-subheader class="md-no-sticky">Link[] index;</md-subheader>
+        <md-input-container>
+          <label>search</label>
+          <input ng-model="user.title">
+        </md-input-container>
         <md-list-item ng-repeat="file in main.fileList">
           <md-button ng-click="main.getFile(file)">
             {{file.name}}
@@ -31,8 +34,8 @@
       </md-list>
     </md-sidenav>
 
-    <div ng-if="main.fileText" id="content" flex>
-      <md-content md-preview="main.fileText"></md-content>
+    <div ng-if="main.fileText" flex>
+      <md-content md-preview="main.fileText" id="content"></md-content>
     </div>
   </div>
 
