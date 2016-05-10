@@ -12,10 +12,34 @@ md-toolbar h3 {
   margin: auto;
   font-weight: 500;
 }
-
 md-list-item > button {
   width:100%;
   text-align:left !important;
+}
+md-input-container {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+md-toolbar h3 {
+  margin: auto;
+  font-weight: 500;
+}
+md-content h1{
+  color: #E91E63;
+  font-weight: 500;
+}
+md-content p {
+  font-size: 1.2em;
+}
+md-content pre {
+  color: #eeeeee;
+  background-color: #424242;
+  padding: 10px 5px;
+  overflow-x: auto;
+  font-size: 1.2em;
 }
 
 #content  {

@@ -4,7 +4,15 @@ var remote = require('remote');
 var fileUtil = remote.require('./lib/fileUtil');
 var baseDir = process.cwd();
 
+// TODO:マークダウンをBowerにからnpmでのインストールに変更する？
+console.log(marked('I am using __markdown__.'));
+
 var ngModule = angular.module('javaDict', ['ngMaterial'])
+  .config(function($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+      .primaryPalette('pink')
+      .accentPalette('orange');
+  });
 
 ngModule.controller('MainController', function($scope) {
   var main = this;
