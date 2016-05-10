@@ -23,9 +23,9 @@
       <md-list>
         <md-input-container>
           <label>search</label>
-          <input ng-model="user.title">
+          <input ng-model="search">
         </md-input-container>
-        <md-list-item ng-repeat="file in main.fileList">
+        <md-list-item ng-repeat="file in main.fileList | filter:search | orderBy:orderProp">
           <md-button ng-click="main.getFile(file)">
             {{file.name}}
             <!-- <a ng-click="main.getFile(file)">{{file.name}}</a> -->
