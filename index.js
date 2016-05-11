@@ -21,8 +21,11 @@ ngModule.controller('MainController', function($scope) {
   main.fileText = fileUtil.getAsText("description.md");
 
   main.getFile = function(file) {
-    file.isSelected = true;
+    console.log('click');
     main.fileText = fileUtil.getAsText(file.filepath);
+  };
+  main.windowClose = function () {
+    window.close();
   };
 
   fileUtil.fetchContentList(baseDir, function(err, fileList) {
